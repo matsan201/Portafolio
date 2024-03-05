@@ -1,69 +1,91 @@
 // import React from 'react'
-import hotelhunt from '../assets/hotelhunt.jpeg'
-import portfolio1 from '../assets/portfolio1.png'
-import portfolio2 from '../assets/portfolio2.png'
-import portfolio3 from '../assets/portfolio3.png'
-import portfolio4 from '../assets/portfolio4.png'
-import portfolio5 from '../assets/portfolio5.png'
-const Portfolio = () => {
+import HotelHunt from "../assets/proyect/hotelhunt.jpeg"
+import Portfolio1 from "../assets/proyect/portfolio1.png"
+import Portfolio2 from "../assets/proyect/portfolio2.png"
+import Portfolio3 from "../assets/proyect/portfolio4.png"
+import Portfolio4 from "../assets/proyect/portfolio3.png"
+import Portfolio5 from "../assets/proyect/portfolio5.png"
 
-    const portfolio = [
-        {
-            id: 1,
-            src: hotelhunt
-        },
-        {
-            id: 2,
-            src: portfolio1
-        },
-        {
-            id: 3,
-            src: portfolio2
-        },
-        {
-            id: 4,
-            src: portfolio3
-        },
-        {
-            id: 5,
-            src: portfolio4
-        },
-        {
-            id: 6,
-            src: portfolio5
-        },
-    ]
+const data = [
+  {
+    id: 1,
+    image: Portfolio1,
+    title: "React JS Aplication",
+    demo: "",
+    code: "https://github.com/public-apis/public-apis?tab=readme-ov-file",
+  },
+  {
+    id: 2,
+    image: HotelHunt,
+    title: "",
+    demo: "",
+    code: "",
+  },
+  {
+    id: 3,
+    image: Portfolio2,
+    title: "",
+    demo: "",
+    code: "",
+  },
+  {
+    id: 4,
+    image: Portfolio3,
+    title: "",
+    demo: "",
+    code: "",
+  },
+  {
+    id: 5,
+    image: Portfolio4,
+    title: "",
+    demo: "",
+    code: "",
+  },
+  {
+    id: 6,
+    image: Portfolio5,
+    title: "",
+    demo: "",
+    code: "",
+  },
+]
 
-
+const Portofolio2 = () => {
   return (
-    <div id='portfolio' className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen'>
-        <div className='max-w-screen-lg pg-4 mx-auto flex flex-col justify-center w-full h-full'>
-            <div className='pb-8 text-center' >
-                <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Portolio</p>
-                <p className='py-6'>Mira algunos de mis trabajos aquí</p>
-            </div>
+    <div id="portfolio" className="w-full md:h-screen text-gray-300 bg-gradient-to-b from-black to-gray-800 ">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+        <div className="pb-8 text-center">
+            <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-gray-500">Portfolio</p>
+            <p className="py-6">Mira algunos de mis trabajos aquí</p>
+        </div>
 
-            
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {
-                portfolio.map(({id, src}) => (
-                    <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-                    <img src={src} alt=""  className='rounded-md duration-200 hover:scale-105'/>
-                    <div className='flex items-center justify-center'>
-                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo
-                        </button>
-                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code
-                        </button>
+              data.map(({id, image, title, demo, code}) => {
+                return (
+                  <div key={id} style={{backgroundImage: `url(${image})`}} className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div">
+                <div className="opacity-0 group-hover:opacity-100">
+                    <span className="text-2xl font-bold text-white tracking-wider">
+                      {title}
+                    </span>
+                    <div className="pt-8 text-center">
+                        <a href={demo}>
+                            <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">Demo</button>
+                        </a>
+                        <a href={code}>
+                            <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">Code</button>
+                        </a>
                     </div>
                 </div>
-                ))
-            }
-                
             </div>
+                )
+              })
+            }
         </div>
+      </div>
     </div>
   )
 }
 
-export default Portfolio
+export default Portofolio2
