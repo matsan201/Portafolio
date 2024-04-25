@@ -31,7 +31,7 @@ const NavBar2 = () => {
                     <a href="#portfolio">Portfolio</a>
                 </li>
                 <li className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">
-                    <a href="#experince">Experience</a>
+                    <a href="#experience">Experience</a>
                 </li>
                 <li className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">
                     <a href="#contact">Contact</a>

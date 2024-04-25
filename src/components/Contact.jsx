@@ -2,7 +2,7 @@
 
 const Contact = () => {
   return (
-    <div id='contact' className="w-full h-screen bg-gradient-to-b  from-gray-800 to-black p-4 text-white ">
+    <div id='contact' className="w-full h-screen bg-gradient-to-b  from-black to-gray-800 p-4 text-white ">
       <div className=" flex flex-col p-4 justify-center max-w-sreen-lg mx-auto h-full">
         <div className="pb-8 text-center">
             <p className=" text-4xl font-bold inline border-b-4 border-gray-500">Contact</p>
